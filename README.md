@@ -31,4 +31,10 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-![alt text](https://github.com/Ibrahim-Kaldesh/Guess-my-number/blob/main/Images/1.png?raw=true)
+<p align="center">
+  <img src="Images/1.png" width="400px" height="400px" title="Start"><hr>
+  <img src="Images/2.png" width="400px" height="400px" title="No number"><hr>
+  <img src="Images/3.png" width="400px" height="400px" title="Guess blow generated number"><hr>
+  <img src="Images/4.png" width="400px" height="400px" title="Guess above generated number"<hr>
+  <img src="Images/5.png" width="400px" height="400px" title="Guess exactly the generated number">
+</p>
