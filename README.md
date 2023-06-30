@@ -31,10 +31,9 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-<p align="center">
-  <img src="Images/1.png" width="350" title="Start">
-  <img src="Images/2.png" width="350" title="No number">
-  <img src="Images/3.png" width="350" title="Guess blow generated number">
-  <img src="Images/4.png" width="350" title="Guess above generated number">
-  <img src="Images/5.png" width="350" title="Guess exactly the generated number">
-</p>
+<img src="Images/1.png" width="350" title="Start"><br>
+<img src="Images/2.png" width="350" title="No number"><br>
+<img src="Images/3.png" width="350" title="Guess blow generated number"><br>
+<img src="Images/4.png" width="350" title="Guess above generated number"><br>
+<img src="Images/5.png" width="350" title="Guess exactly the generated number"><br>
+
