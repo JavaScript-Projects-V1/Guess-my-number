@@ -2,7 +2,7 @@
 
 ## About the project.
 
-This is a very simple project that allows the user to guess a number the benefits from DOM in javascript to make chenges on both html and css file and bulid the logic of the project.
+This is a very simple project that allows the user to guess a number that benefits from DOM in javascript to make chenges on both html and css file and bulid the logic of the project.
 
 ## How it works.
 
