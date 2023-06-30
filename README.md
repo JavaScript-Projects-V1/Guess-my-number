@@ -31,4 +31,4 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-![alt text](http://url/to/img.png)
+![alt text](http://url/to/Images/1.png)
