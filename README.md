@@ -1,5 +1,5 @@
 # Guess-my-number.
-## About project.
+## About the project.
 This is a very simple project that allows the user to guess a number the benefits from DOM in javascript to make chenges on both html and css file and bulid the logic of the project.
 
 ## How it works.
@@ -20,3 +20,6 @@ The programm generates a random number if the user gussed number is
 - HTML5.
 - CSS3.
 - JavaScript (ES6).
+
+## Images
+![alt text](http://url/to/img.png)
