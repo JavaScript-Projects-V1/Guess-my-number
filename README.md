@@ -36,3 +36,7 @@ The programm generates a random number if the user gussed number is
 <img src="Images/3.png" style = "width:400px;height;400px;align:center" title="Guess blow generated number"><br>
 <img src="Images/4.png" style = "width:400px;height;400px;align:center" title="Guess above generated number"><br>
 <img src="Images/5.png" style = "width:400px;height;400px;align:center" title="Guess exactly the generated number"><br>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d7b0d205bff362aa8a91cdfe93cb78a5a045772b
