@@ -31,4 +31,4 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-![alt text](http://url/to/Images/1.png)
+![alt text](https://github.com/Ibrahim-Kaldesh/Guess-my-number/blob/main/Images/1.png?raw=true)
