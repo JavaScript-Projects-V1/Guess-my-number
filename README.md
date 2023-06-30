@@ -23,6 +23,10 @@ The programm generates a random number if the user gussed number is
 - No enterd number
   - a meassage "⛔ No number" appears
 
+- there is high score the user can get theough the game
+
+- Again button to generate a new random number and continue the game with new (score = 20)
+
 ## Languages
 
 - HTML5.
