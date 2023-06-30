@@ -31,4 +31,7 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-![alt text](https://github.com/Ibrahim-Kaldesh/Guess-my-number/blob/main/1.png?raw=true)
+<p align="center">
+  <img src="Images/1.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
