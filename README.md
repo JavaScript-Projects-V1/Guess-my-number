@@ -31,7 +31,7 @@ The programm generates a random number if the user gussed number is
 
 ## Images
 
-<img src="Images/1.png" width="350" title="Start"><br>
+<img src="Images/1.png" style = "width:400px;height;400px;text-align:center" title="Start">
 <img src="Images/2.png" width="350" title="No number"><br>
 <img src="Images/3.png" width="350" title="Guess blow generated number"><br>
 <img src="Images/4.png" width="350" title="Guess above generated number"><br>
