@@ -46,11 +46,8 @@ checkBtn.addEventListener("click", function () {
       } else {
         --totalScore;
         score.textContent = totalScore;
-        if (guessed > correctGuess) {
-          message.textContent = "📈 Too high!";
-        } else if (guessed < correctGuess) {
-          message.textContent = "📉 Too low!";
-        }
+        message.textContent =
+          guessed > correctGuess ? "📈 Too high!" : "📉 Too low!";
       }
     }
   }
