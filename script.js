@@ -1,10 +1,12 @@
 "use strict";
 
-let totalScore = 20;
-let highScore = 0;
-let playing = true;
+const diableGame = function () {
+  guessInp.setAttribute("disabled", "");
+  playing = false;
+};
 
 const winning = function () {
+  diableGame();
   message.textContent = "🎉 Correct Number!";
   document.querySelector("body").style.backgroundColor = "#60b347";
   ansBox.textContent = correctGuess;
@@ -18,9 +20,12 @@ const winning = function () {
 const lose = function () {
   message.textContent = "💥 You lost the game!";
   score.textContent = 0;
-  guessInp.setAttribute("disabled", true);
-  playing = false;
+  diableGame();
 };
+
+let totalScore = 20;
+let highScore = 0;
+let playing = true;
 
 const checkBtn = document.querySelector(".check");
 const againBtn = document.querySelector(".again");
@@ -38,8 +43,6 @@ checkBtn.addEventListener("click", function () {
       message.textContent = "⛔️ Not Valid number!";
     else if (guessed === correctGuess) {
       winning();
-      guessInp.setAttribute("disabled", true);
-      playing = false;
     } else {
       if (totalScore === 1) {
         lose();
