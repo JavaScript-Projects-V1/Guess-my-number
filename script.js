@@ -1,62 +1,70 @@
-// When the user wins
-function win() {
-  document.querySelector(".message").textContent = "🎉 Correct Number!";
-  document.querySelector(".number").textContent = secretNumber;
-  document.querySelector("body").style.backgroundColor = "#60b347";
-  document.querySelector(".number").style.width = "30rem";
-  if (score > highscore) {
-    highscore = score;
-    document.querySelector(".highscore").textContent = score;
-  }
-}
+"use strict";
 
-// Display message
-const display = function (message) {
-  document.querySelector(".score").textContent = score;
-  document.querySelector(".message").textContent = message;
+let totalScore = 20;
+let highScore = 0;
+let playing = true;
+
+const winning = function () {
+  message.textContent = "🎉 Correct Number!";
+  document.querySelector("body").style.backgroundColor = "#60b347";
+  ansBox.textContent = correctGuess;
+  ansBox.style.width = "30rem";
+  if (totalScore > highScore) {
+    highScore = totalScore;
+    highScoreContent.textContent = highScore;
+  }
 };
 
-let score = 20;
-let highscore = 0;
-let secretNumber = Math.floor(Math.random() * 20) + 1;
+const lose = function () {
+  message.textContent = "💥 You lost the game!";
+  score.textContent = 0;
+  guessInp.setAttribute("disabled", true);
+  playing = false;
+};
 
-document.querySelector(".check").addEventListener("click", function () {
-  const guess = Number(document.querySelector(".guess").value);
-  if (score > 1) {
-    if (guess <= 0 || !guess) {
-      document.querySelector(".message").textContent = "⛔ No number";
-    }
-    // make validation on input
-    if (guess >= 1 && guess <= 20) {
-      // if the guessed number is high or low
-      if (guess !== secretNumber) {
-        score--;
-        display(`${guess > secretNumber ? "📉 Too High !" : "📈 Too Low !"}`);
+const checkBtn = document.querySelector(".check");
+const againBtn = document.querySelector(".again");
+const guessInp = document.querySelector(".guess");
+const message = document.querySelector(".message");
+const ansBox = document.querySelector(".number");
+const score = document.querySelector(".score");
+const highScoreContent = document.querySelector(".highscore");
+let correctGuess = Math.floor(Math.random() * 20) + 1;
+
+checkBtn.addEventListener("click", function () {
+  if (playing) {
+    const guessed = Number(guessInp.value);
+    if (guessed <= 0 || guessed > 20)
+      message.textContent = "⛔️ Not Valid number!";
+    else if (guessed === correctGuess) {
+      winning();
+      guessInp.setAttribute("disabled", true);
+      playing = false;
+    } else {
+      if (totalScore === 1) {
+        lose();
+      } else {
+        --totalScore;
+        score.textContent = totalScore;
+        if (guessed > correctGuess) {
+          message.textContent = "📈 Too high!";
+        } else if (guessed < correctGuess) {
+          message.textContent = "📉 Too low!";
+        }
       }
-      // if the guessed number is correct
-      else if (guess === secretNumber) {
-        win();
-      }
-    }
-  } else {
-    if (guess === secretNumber) win();
-    else {
-      document.querySelector(".message").textContent = "💥 You lost the game !";
-      document.querySelector(".score").textContent = 0;
     }
   }
 });
 
-document.querySelector(".again").addEventListener("click", function () {
-  // reset all Html
-  score = 20;
-  secretNumber = Math.floor(Math.random() * 20) + 1;
-  document.querySelector(".message").textContent = " 🤔 Start guessing...";
-  document.querySelector(".score").textContent = score;
-  document.querySelector(".number").textContent = "?";
-  document.querySelector(".guess").value = "";
-
-  // reset all Css
+againBtn.addEventListener("click", function () {
+  correctGuess = Math.floor(Math.random() * 20) + 1;
+  message.textContent = "🤔 Start guessing...";
+  ansBox.textContent = "?";
+  guessInp.value = "";
+  totalScore = 20;
+  score.textContent = totalScore;
   document.querySelector("body").style.backgroundColor = "#222";
-  document.querySelector(".number").style.width = "15rem";
+  ansBox.style.width = "15rem";
+  playing = true;
+  guessInp.removeAttribute("disabled");
 });
